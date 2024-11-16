@@ -123,6 +123,7 @@ public final class Litestrike extends JavaPlugin implements Listener{
 		w.setGameRule(GameRule.MOB_GRIEFING, false);
 		w.setGameRule(GameRule.DO_FIRE_TICK, false);
 		w.setGameRule(GameRule.RANDOM_TICK_SPEED, 0);
+		w.setGameRule(GameRule.ANNOUNCE_ADVANCEMENTS, false);
 
 		// /gamerule spawnChunkRadius needs to be set to 0 before world load,
 		// otherwise the border detection can fail.

@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.logging.Level;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Color;
@@ -80,13 +81,6 @@ public class GameController {
 		// setup scoreboard and bossbar
 		ScoreboardController.setup_scoreboard(teams);
 		Litestrike.getInstance().bbd.showBossBar();
-
-		new BukkitRunnable() {
-			@Override
-			public void run() {
-				next_round();
-			}
-		}.runTaskLater(Litestrike.getInstance(), 1);
 
 		// This just calls update_game_state() once every second
 		new BukkitRunnable() {
